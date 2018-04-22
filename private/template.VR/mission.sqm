@@ -3187,7 +3187,7 @@ class Mission
 					flags=5;
 					class Attributes
 					{
-						init="call{this setFlagTexture ""tft8.paa""}";
+						init="call{this setFlagTexture ""flag_tft8.jpg""}";
 					};
 					id=241;
 					type="Flag_White_F";
