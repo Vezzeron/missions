@@ -5,21 +5,21 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1573;
+	toggles=1569;
 	class ItemIDProvider
 	{
-		nextID=251;
+		nextID=256;
 	};
 	class LayerIndexProvider
 	{
-		nextID=14;
+		nextID=25;
 	};
 	class Camera
 	{
-		pos[]={7514.0923,13.135472,7425.0474};
-		dir[]={0.78174448,-0.58282179,0.22187316};
-		up[]={0.56069249,0.81257588,0.15913405};
-		aside[]={0.27303693,-3.9214501e-007,-0.96201712};
+		pos[]={7520.0273,10.988143,7422.248};
+		dir[]={0.73716199,-0.48921242,0.46621376};
+		up[]={0.41350785,0.87211573,0.26151949};
+		aside[]={0.53453749,-8.8021625e-007,-0.84519821};
 	};
 };
 binarizationWanted=0;
@@ -31,13 +31,16 @@ addons[]=
 	"A3_Structures_F_Mil_Cargo",
 	"A3_Weapons_F_Ammoboxes",
 	"ace_cargo",
-	"A3_Ui_F"
+	"A3_Ui_F",
+	"A3_Modules_F",
+	"tft_cup",
+	"tft_misc"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=6;
+		items=9;
 		class Item0
 		{
 			className="acex_headless";
@@ -80,6 +83,25 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item6
+		{
+			className="A3_Modules_F";
+			name="Arma 3 Alpha - Scripted Modules";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item7
+		{
+			className="tft_cup";
+			name="tft_cup";
+			author="Ampersand, YoursTruly";
+		};
+		class Item8
+		{
+			className="tft_misc";
+			name="tft_misc";
+			author="Ampersand, YoursTruly";
+		};
 	};
 };
 randomSeed=3090463;
@@ -100,7 +122,7 @@ class ScenarioData
 	{
 		gameType="Coop";
 		minPlayers=1;
-		maxPlayers=41;
+		maxPlayers=43;
 	};
 	wreckManagerMode=1;
 	wreckLimit=10;
@@ -194,6 +216,8 @@ class Mission
 		forecastWind=0.1;
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
+		wavesForced=1;
+		windForced=1;
 		year=2017;
 		month=6;
 		day=29;
@@ -204,7 +228,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1;
+		items=6;
 		class Item0
 		{
 			dataType="Layer";
@@ -575,7 +599,7 @@ class Mission
 								class Attribute0
 								{
 									property="ace_isMedic";
-									expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+									expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 									class Value
 									{
 										class data
@@ -2012,7 +2036,7 @@ class Mission
 								class Attribute0
 								{
 									property="ace_isMedic";
-									expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+									expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 									class Value
 									{
 										class data
@@ -3238,7 +3262,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={7528,5.8924227,7433};
-						angles[]={-0,4.7386389,0};
+						angles[]={0,4.7386389,0};
 					};
 					side="Empty";
 					flags=4;
@@ -3339,7 +3363,7 @@ class Mission
 								class Attribute1
 								{
 									property="ace_isMedic";
-									expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+									expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 									class Value
 									{
 										class data
@@ -3513,7 +3537,7 @@ class Mission
 								class Attribute1
 								{
 									property="ace_isMedic";
-									expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+									expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 									class Value
 									{
 										class data
@@ -3686,7 +3710,7 @@ class Mission
 								class Attribute1
 								{
 									property="ace_isMedic";
-									expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+									expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 									class Value
 									{
 										class data
@@ -3804,7 +3828,7 @@ class Mission
 								class Attribute1
 								{
 									property="ace_isMedic";
-									expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+									expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 									class Value
 									{
 										class data
@@ -4013,7 +4037,7 @@ class Mission
 								class Attribute1
 								{
 									property="ace_isMedic";
-									expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+									expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 									class Value
 									{
 										class data
@@ -4131,7 +4155,7 @@ class Mission
 								class Attribute1
 								{
 									property="ace_isMedic";
-									expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"",_value,true];};";
+									expression="if (_value > -1) then {_this setVariable [""ace_medical_medicClass"", _value, true];};";
 									class Value
 									{
 										class data
@@ -4257,6 +4281,78 @@ class Mission
 				};
 			};
 			id=242;
+		};
+		class Item1
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={7530.1035,5.5928116,7435.4126};
+			};
+			name="lock_door_1";
+			init="call{ " \n "private _r = 2; " \n "private _vn = """"; " \n "private _c = getPos this; " \n "private _t = nearestObject [_c, ""HOUSE""]; " \n "{ " \n " _snsplit = _x splitString ""_""; " \n " if ( " \n "  (count _snsplit == 2) && " \n "  ((_snsplit select 0) isEqualTo ""door"") &&  " \n "  (0 < parseNumber (_snsplit select 1)) " \n " ) then { " \n "  if ((_c distance (_t modelToWorld (_t selectionPosition _x))) < _r) then { " \n "   _vn = ""bis_disabled_"" + _x; " \n "   _t setVariable [_vn, 1, true]; " \n "  }; " \n " }; " \n "} count selectionNames _t;}";
+			id=251;
+			type="Logic";
+		};
+		class Item2
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7529.1079,5,7432.6572};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=252;
+			type="TFT_B_Medical";
+		};
+		class Item3
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7530.895,5.8924227,7432.2715};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=253;
+			type="TFT_supplyCrate_F";
+		};
+		class Item4
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7532.5742,5.8924227,7432.2446};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=254;
+			type="TFT_supplyCrate_Adv_F";
+		};
+		class Item5
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7529.6431,5.2840548,7432.2373};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=255;
+			type="Box_TFT8_Ammo_F";
 		};
 	};
 };
