@@ -1,0 +1,11 @@
+respawnOnStart = -1;
+
+#include "scripts\VVS\menu.h"
+#include "dialogs\defines.hpp"
+#include "dialogs\dialogs.hpp"
+
+class CfgFunctions
+{
+    #include "functions\training\CfgFunctions.hpp"
+    #include "scripts\VVS\Functions.h"
+};
