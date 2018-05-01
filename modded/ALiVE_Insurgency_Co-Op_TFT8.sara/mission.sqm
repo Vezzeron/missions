@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=246;
+		nextID=248;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=4;
+		nextID=7;
 	};
 	class Camera
 	{
-		pos[]={9530.6436,164.995,9810.6895};
-		dir[]={0,-0.70710683,0.70710683};
-		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,-0};
+		pos[]={2024.3816,10.321651,19939.496};
+		dir[]={0.1407838,-0.75068766,0.64548779};
+		up[]={0.15996833,0.66065311,0.73344761};
+		aside[]={0.97703391,-6.5629138e-008,-0.21309575};
 	};
 };
 binarizationWanted=0;
@@ -387,6 +387,12 @@ class ScenarioData
 	disabledAI=1;
 	respawn=3;
 	respawnDelay=10;
+	class Header
+	{
+		gameType="Coop";
+		minPlayers=1;
+		maxPlayers=56;
+	};
 	wreckRemovalMaxTime=3600;
 };
 class CustomAttributes
@@ -411,8 +417,22 @@ class CustomAttributes
 					};
 					class value
 					{
-						items=1;
+						items=2;
 						class Item0
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="ace_spectator";
+							};
+						};
+						class Item1
 						{
 							class data
 							{
@@ -9781,7 +9801,7 @@ class CustomAttributes
 																"SCALAR"
 															};
 														};
-														value=0;
+														value=1;
 													};
 												};
 												class Item1
@@ -26312,41 +26332,15 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={2024.4692,-11.950836,19962.141};
+				position[]={2024.469,-11.950996,19962.141};
 			};
+			name="hc_1";
 			isPlayable=1;
-			description="hc_1";
 			id=179;
 			type="HeadlessClient_F";
-			atlOffset=58.06916;
+			atlOffset=58.069;
 		};
 		class Item46
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={2022.2092,-11.957836,19957.961};
-			};
-			isPlayable=1;
-			description="hc_2";
-			id=180;
-			type="HeadlessClient_F";
-			atlOffset=58.06216;
-		};
-		class Item47
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={2025.1282,-11.957836,19955.326};
-			};
-			isPlayable=1;
-			description="hc_3";
-			id=181;
-			type="HeadlessClient_F";
-			atlOffset=58.06216;
-		};
-		class Item48
 		{
 			dataType="Marker";
 			position[]={9995.3994,137.395,9973.7979};
@@ -26359,7 +26353,7 @@ class Mission
 			id=182;
 			atlOffset=-2.5999908;
 		};
-		class Item49
+		class Item47
 		{
 			dataType="Marker";
 			position[]={17731.695,77.606003,14424.632};
@@ -26372,7 +26366,7 @@ class Mission
 			id=184;
 			atlOffset=69.239647;
 		};
-		class Item50
+		class Item48
 		{
 			dataType="Marker";
 			position[]={8428.3701,178.91499,7634.77};
@@ -26385,7 +26379,7 @@ class Mission
 			id=187;
 			atlOffset=0.054504395;
 		};
-		class Item51
+		class Item49
 		{
 			dataType="Marker";
 			position[]={9648.8398,172.65601,8599.791};
@@ -26398,7 +26392,7 @@ class Mission
 			id=188;
 			atlOffset=-0.00036621094;
 		};
-		class Item52
+		class Item50
 		{
 			dataType="Marker";
 			position[]={2731.8701,11.807,2420.4099};
@@ -26411,7 +26405,7 @@ class Mission
 			id=190;
 			atlOffset=-8.1057215;
 		};
-		class Item53
+		class Item51
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -26806,7 +26800,7 @@ class Mission
 				nAttributes=20;
 			};
 		};
-		class Item54
+		class Item52
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -27030,7 +27024,7 @@ class Mission
 				nAttributes=11;
 			};
 		};
-		class Item55
+		class Item53
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -27102,7 +27096,7 @@ class Mission
 				nAttributes=3;
 			};
 		};
-		class Item56
+		class Item54
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -27193,7 +27187,7 @@ class Mission
 				nAttributes=4;
 			};
 		};
-		class Item57
+		class Item55
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -27473,7 +27467,7 @@ class Mission
 				nAttributes=14;
 			};
 		};
-		class Item58
+		class Item56
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -27886,7 +27880,7 @@ class Mission
 				nAttributes=21;
 			};
 		};
-		class Item59
+		class Item57
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -28224,7 +28218,7 @@ class Mission
 				nAttributes=17;
 			};
 		};
-		class Item60
+		class Item58
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -28637,7 +28631,7 @@ class Mission
 				nAttributes=21;
 			};
 		};
-		class Item61
+		class Item59
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -28842,7 +28836,7 @@ class Mission
 				nAttributes=10;
 			};
 		};
-		class Item62
+		class Item60
 		{
 			dataType="Marker";
 			position[]={10449.043,118.939,16052.583};
@@ -28855,7 +28849,7 @@ class Mission
 			id=217;
 			atlOffset=69.213867;
 		};
-		class Item63
+		class Item61
 		{
 			dataType="Marker";
 			position[]={9805.9971,33.912998,6101.061};
@@ -28868,7 +28862,7 @@ class Mission
 			id=186;
 			atlOffset=1.9073486e-005;
 		};
-		class Item64
+		class Item62
 		{
 			dataType="Marker";
 			position[]={14036.077,0,6440.71};
@@ -28881,7 +28875,7 @@ class Mission
 			id=218;
 			atlOffset=19.530001;
 		};
-		class Item65
+		class Item63
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -29067,7 +29061,7 @@ class Mission
 				nAttributes=9;
 			};
 		};
-		class Item66
+		class Item64
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -29253,14 +29247,14 @@ class Mission
 				nAttributes=9;
 			};
 		};
-		class Item67
+		class Item65
 		{
 			dataType="Layer";
 			name="Layer 1";
 			id=222;
 			atlOffset=67.569252;
 		};
-		class Item68
+		class Item66
 		{
 			dataType="Object";
 			class PositionInfo
@@ -29630,6 +29624,32 @@ class Mission
 				};
 				nAttributes=2;
 			};
+		};
+		class Item67
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2024.7012,-11.950996,19948.547};
+			};
+			name="hc_2";
+			isPlayable=1;
+			id=246;
+			type="HeadlessClient_F";
+			atlOffset=58.069;
+		};
+		class Item68
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2024.64,-11.950996,19947.734};
+			};
+			name="hc_3";
+			isPlayable=1;
+			id=247;
+			type="HeadlessClient_F";
+			atlOffset=58.069;
 		};
 	};
 	class Connections
