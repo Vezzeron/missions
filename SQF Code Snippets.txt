@@ -1,0 +1,23 @@
+// Force ai to be stationary and stance, useful for in cover
+this disableAI "PATH"; this setUnitPos "UP";
+this disableAI "PATH"; this setUnitPos "MIDDLE";
+this disableAI "PATH"; this setUnitPos "DOWN";
+
+// vic light
+this setPilotLight true;
+
+// Infantry gets new mag on reload, infinite ammo
+this addEventHandler ["Reloaded", {
+	_oldMag = _this select 4;
+	
+	if not (_oldMag isEqualTo []) then {
+		_unit = _this select 0;
+		_unit addMagazineGlobal (_oldMag select 0);
+	};
+}];
+
+// ACE medical damage
+
+//"head", "body", "arm_l", "arm_r", "leg_l", "leg_r"
+//"bullet", "grenade", "explosive", "shell", "vehiclecrash", "backblast", "stab", "punch", "falling", "ropeburn", "unknown"
+[_victim, 0.1, "head", "bullet"] call ace_medical_fnc_addDamageToUnit;
