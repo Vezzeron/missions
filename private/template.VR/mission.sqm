@@ -12,14 +12,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=26;
+		nextID=28;
 	};
 	class Camera
 	{
-		pos[]={7520.0273,10.988143,7422.248};
-		dir[]={0.73716199,-0.48921242,0.46621376};
-		up[]={0.41350785,0.87211573,0.26151949};
-		aside[]={0.53453749,-8.8021625e-007,-0.84519821};
+		pos[]={7528.5874,10.988143,7429.1782};
+		dir[]={0.11030661,-0.80488497,0.58317202};
+		up[]={0.14959291,0.59339201,0.79087019};
+		aside[]={0.98262531,-2.6097405e-007,-0.18586436};
 	};
 };
 binarizationWanted=0;
@@ -3294,7 +3294,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="call{[this, [""Arsenal"", ""Preparation"", ""Spectator""]] call TFT_fnc_addActions}";
+						init="call{[this, [""Arsenal"", ""Preparation"", ""Spectator""]] call TFT_fnc_addActions;" \n "this addBackpackCargo [""TFT_B_Medical"", 2];}";
 						name="box";
 					};
 					id=112;
@@ -3320,7 +3320,26 @@ class Mission
 								};
 							};
 						};
-						nAttributes=1;
+						class Attribute1
+						{
+							property="Enh_featureType";
+							expression="_this setFeatureType parseNumber (_value)";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="0";
+								};
+							};
+						};
+						nAttributes=2;
 					};
 				};
 				class Item6
@@ -4325,7 +4344,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7529.1079,5,7432.6572};
+				position[]={7529.4683,5,7431.6357};
 			};
 			side="Empty";
 			flags=4;
@@ -4340,7 +4359,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7530.895,5.8924227,7432.2715};
+				position[]={7531.894,5.8924227,7432.2715};
 			};
 			side="Empty";
 			flags=4;
@@ -4355,7 +4374,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7532.5742,5.8924227,7432.2446};
+				position[]={7533.5732,5.8924227,7432.2446};
 			};
 			side="Empty";
 			flags=4;
@@ -4370,7 +4389,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7529.6431,5.2840548,7432.2373};
+				position[]={7530.6421,5.2840548,7432.2373};
 			};
 			side="Empty";
 			flags=4;
