@@ -5,6 +5,10 @@ if isServer then {
 	_curator setVariable ["Addons", 3, true]; 
 	_curator setVariable ["Owner", "#adminLogged", true];
 
+	{ 
+	  _x addCuratorEditableObjects [allUnits + vehicles, true]; 
+	} forEach allCurators; 
+	
 	//all players
 	private _allHCs = entities "HeadlessClient_F";
 	private _allHPs = allPlayers - _allHCs;

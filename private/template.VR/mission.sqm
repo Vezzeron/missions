@@ -12,20 +12,19 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=28;
+		nextID=30;
 	};
 	class Camera
 	{
-		pos[]={7528.5874,10.988143,7429.1782};
-		dir[]={0.11030661,-0.80488497,0.58317202};
-		up[]={0.14959291,0.59339201,0.79087019};
-		aside[]={0.98262531,-2.6097405e-007,-0.18586436};
+		pos[]={7517.4829,15.9136,7417.749};
+		dir[]={0.34397289,-0.57842845,0.73974168};
+		up[]={0.24390808,0.81567782,0.52454382};
+		aside[]={0.90681607,-6.1688479e-007,-0.42166343};
 	};
 };
 binarizationWanted=0;
 addons[]=
 {
-	"acex_headless",
 	"A3_Characters_F",
 	"A3_Structures_F_Mil_Flags",
 	"A3_Structures_F_Mil_Cargo",
@@ -41,69 +40,62 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=10;
+		items=9;
 		class Item0
-		{
-			className="acex_headless";
-			name="ACEX - Headless";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item1
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item2
+		class Item1
 		{
 			className="A3_Structures_F_Mil";
 			name="Arma 3 - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item3
+		class Item2
 		{
 			className="A3_Weapons_F";
 			name="Arma 3 Alpha - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item4
+		class Item3
 		{
 			className="ace_cargo";
 			name="ACE3 - Cargo";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item5
+		class Item4
 		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item6
+		class Item5
 		{
 			className="cfp_uniforms";
 			name="cfp_uniforms";
 			author="CFP Team";
 		};
-		class Item7
+		class Item6
 		{
 			className="A3_Modules_F";
 			name="Arma 3 Alpha - Scripted Modules";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item8
+		class Item7
 		{
 			className="tft_cup";
 			name="tft_cup";
 			author="Ampersand, YoursTruly";
 		};
-		class Item9
+		class Item8
 		{
 			className="tft_misc";
 			name="tft_misc";
@@ -242,98 +234,8 @@ class Mission
 			name="TFT8";
 			class Entities
 			{
-				items=15;
+				items=14;
 				class Item0
-				{
-					dataType="Logic";
-					class PositionInfo
-					{
-						position[]={7530.8911,5,7442.3784};
-					};
-					id=243;
-					type="acex_headless_module";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="acex_headless_module_delay";
-							expression="_this setVariable ['delay',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=15;
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="acex_headless_module_log";
-							expression="_this setVariable ['log',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						class Attribute2
-						{
-							property="acex_headless_module_enabled";
-							expression="_this setVariable ['enabled',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"BOOL"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						class Attribute3
-						{
-							property="acex_headless_module_endMission";
-							expression="_this setVariable ['endMission',_value,true];";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=0;
-								};
-							};
-						};
-						nAttributes=4;
-					};
-				};
-				class Item1
 				{
 					dataType="Group";
 					side="West";
@@ -1770,7 +1672,7 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item2
+				class Item1
 				{
 					dataType="Group";
 					side="West";
@@ -3207,7 +3109,7 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item3
+				class Item2
 				{
 					dataType="Object";
 					class PositionInfo
@@ -3223,7 +3125,7 @@ class Mission
 					id=241;
 					type="Flag_White_F";
 				};
-				class Item4
+				class Item3
 				{
 					dataType="Object";
 					class PositionInfo
@@ -3282,7 +3184,7 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item5
+				class Item4
 				{
 					dataType="Object";
 					class PositionInfo
@@ -3342,7 +3244,7 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item6
+				class Item5
 				{
 					dataType="Marker";
 					position[]={7526.5,5,7430.5};
@@ -3350,7 +3252,7 @@ class Mission
 					type="Empty";
 					id=153;
 				};
-				class Item7
+				class Item6
 				{
 					dataType="Marker";
 					position[]={7530.0786,5,7440.0625};
@@ -3358,7 +3260,7 @@ class Mission
 					type="b_hq";
 					id=155;
 				};
-				class Item8
+				class Item7
 				{
 					dataType="Group";
 					side="West";
@@ -3532,7 +3434,7 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item9
+				class Item8
 				{
 					dataType="Group";
 					side="West";
@@ -3706,7 +3608,7 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item10
+				class Item9
 				{
 					dataType="Group";
 					side="West";
@@ -3997,7 +3899,7 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item11
+				class Item10
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -4009,7 +3911,7 @@ class Mission
 					id=244;
 					type="HeadlessClient_F";
 				};
-				class Item12
+				class Item11
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -4021,7 +3923,7 @@ class Mission
 					id=245;
 					type="HeadlessClient_F";
 				};
-				class Item13
+				class Item12
 				{
 					dataType="Logic";
 					class PositionInfo
@@ -4033,7 +3935,7 @@ class Mission
 					id=246;
 					type="HeadlessClient_F";
 				};
-				class Item14
+				class Item13
 				{
 					dataType="Group";
 					side="West";
