@@ -21,3 +21,54 @@ this addEventHandler ["Reloaded", {
 //"head", "body", "arm_l", "arm_r", "leg_l", "leg_r"
 //"bullet", "grenade", "explosive", "shell", "vehiclecrash", "backblast", "stab", "punch", "falling", "ropeburn", "unknown"
 [_victim, 0.1, "head", "bullet"] call ace_medical_fnc_addDamageToUnit;
+
+
+// occupy building nearest mouse with unit types from selected group
+
+private ["_classes","_c","_b","_bps","_u","_d","_g","_return"];
+_return = [];
+private _cs = (curatorSelected select 0 select 0);
+private _side = side _cs;
+_classes = (units group _cs) apply {typeOf _x};
+
+_b = nearestBuilding (screenToWorld getMousePosition);
+_bps = (_b) buildingPos -1;
+_return pushBack format ["%1, %2", typeOf _b, count _bps];
+_g = createGroup _side;
+_g deleteGroupWhenEmpty true;
+_g setCombatMode "YELLOW";
+_g setFormation "DIAMOND";
+_g setVariable ["Vcm_Disable",true];
+{
+	if ((floor random (10+1)) < 11) then {
+		_return pushBack "Y";
+		_c = selectRandom _classes;
+		_u = _g createUnit [_c, [0, 0, 0], [], 0, "NONE"];
+		_u setVariable ["acex_headless_blacklist", true, true];
+		_u setPosATL _x;
+		_d = _b getDir _x;
+		_u setDir _d;
+		_u disableAI "PATH";
+		_u setUnitPos "UP";
+	} else {
+		_return pushBack "N";
+	};
+} forEach _bps;
+_return
+
+
+//toggle lock on the door the camera is pointed at
+([100] call ace_interaction_fnc_getDoor) call {
+	params ["_house", "_door"];
+	private _locked = _house getVariable ("bis_disabled_" + _door);
+	if (isNil "_locked") then {
+		_locked = 1;
+	} else {
+		_locked = 1 - _locked;
+	};
+	_house setVariable ["bis_disabled_" + _door, _locked, true];
+	[
+		["unlocked", _door, _house],
+		["locked", _door, _house]
+	] # _locked
+};
